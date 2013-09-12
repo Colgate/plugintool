@@ -43,7 +43,7 @@ if [ -d /servers/ ]
                             fi;
                         done;
                         echo -e '\n'
-                        screen -x `cat /etc/$server.pid` -X stuff 'broadcast Automatic Restart'
+                        screen -x `cat /etc/$server.pid` -X stuff 'broadcast Automatic Restart'$'\012';
                         /sbin/server $server restart
                 fi;
         done;
